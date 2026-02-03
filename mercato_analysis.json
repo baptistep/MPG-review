@@ -1,0 +1,2294 @@
+{
+  "analysis_timestamp": "2026-02-03T14:22:39.639826",
+  "source_file": "mpg_auction_data.json",
+  "team_stats": {
+    "TightOffsideFC": {
+      "total_bids": 32,
+      "won_auctions": 24,
+      "lost_auctions": 8,
+      "total_spent": 500,
+      "players_won": [
+        {
+          "name": "Florian Thauvin",
+          "price": 50,
+          "quotation": 25,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -25
+        },
+        {
+          "name": "Karl-Johan Johnsson",
+          "price": 7,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": 0
+        },
+        {
+          "name": "Arthur Avom",
+          "price": 12,
+          "quotation": 12,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": 0
+        },
+        {
+          "name": "None Endrick",
+          "price": 76,
+          "quotation": 9,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -67
+        },
+        {
+          "name": "Abdoul Ouattara",
+          "price": 13,
+          "quotation": 8,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -5
+        },
+        {
+          "name": "Pablo Pagis",
+          "price": 34,
+          "quotation": 15,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -19
+        },
+        {
+          "name": "Malick Fofana",
+          "price": 22,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -15
+        },
+        {
+          "name": "Mike Penders",
+          "price": 17,
+          "quotation": 16,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -1
+        },
+        {
+          "name": "Sambou Soumano",
+          "price": 12,
+          "quotation": 11,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -1
+        },
+        {
+          "name": "Arouna Sangante",
+          "price": 13,
+          "quotation": 12,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -1
+        },
+        {
+          "name": "Ruben Kluivert",
+          "price": 12,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -5
+        },
+        {
+          "name": "Romain Faivre",
+          "price": 9,
+          "quotation": 8,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -1
+        },
+        {
+          "name": "Ayumu Seko",
+          "price": 11,
+          "quotation": 11,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": 0
+        },
+        {
+          "name": "Pierre Lees-Melou",
+          "price": 14,
+          "quotation": 11,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -3
+        },
+        {
+          "name": "Jean-Victor Makengo",
+          "price": 14,
+          "quotation": 12,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -2
+        },
+        {
+          "name": "None Clinton Mata",
+          "price": 15,
+          "quotation": 14,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z",
+          "value": -1
+        },
+        {
+          "name": "Sidiki Cherif",
+          "price": 28,
+          "quotation": 14,
+          "day": "2",
+          "date": "2026-02-02T12:12:40.729Z",
+          "value": -14
+        },
+        {
+          "name": "Désiré Doué",
+          "price": 60,
+          "quotation": 21,
+          "day": "2",
+          "date": "2026-02-02T12:12:40.729Z",
+          "value": -39
+        },
+        {
+          "name": "Matvey Safonov",
+          "price": 12,
+          "quotation": 10,
+          "day": "2",
+          "date": "2026-02-02T12:12:40.729Z",
+          "value": -2
+        },
+        {
+          "name": "None Caio Henrique",
+          "price": 13,
+          "quotation": 9,
+          "day": "2",
+          "date": "2026-02-02T12:12:40.729Z",
+          "value": -4
+        },
+        {
+          "name": "Gideon Mensah",
+          "price": 10,
+          "quotation": 10,
+          "day": "2",
+          "date": "2026-02-02T12:12:40.729Z",
+          "value": 0
+        },
+        {
+          "name": "Danny Namaso",
+          "price": 20,
+          "quotation": 10,
+          "day": "2",
+          "date": "2026-02-02T12:12:40.729Z",
+          "value": -10
+        },
+        {
+          "name": "Ainsley Maitland-Niles",
+          "price": 18,
+          "quotation": 12,
+          "day": "3",
+          "date": "2026-02-02T13:29:22.066Z",
+          "value": -6
+        },
+        {
+          "name": "Jordan Teze",
+          "price": 8,
+          "quotation": 8,
+          "day": "4",
+          "date": "2026-02-02T13:48:07.819Z",
+          "value": 0
+        }
+      ],
+      "players_lost": [
+        {
+          "name": "Pavel Sulc",
+          "bid_price": 39,
+          "won_price": 55,
+          "quotation": 17,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z"
+        },
+        {
+          "name": "Matthieu Udol",
+          "bid_price": 19,
+          "won_price": 32,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z"
+        },
+        {
+          "name": "Malang Sarr",
+          "bid_price": 18,
+          "won_price": 20,
+          "quotation": 16,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z"
+        },
+        {
+          "name": "Odsonne Édouard",
+          "bid_price": 41,
+          "won_price": 44,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z"
+        },
+        {
+          "name": "Wesley Saïd",
+          "bid_price": 52,
+          "won_price": 56,
+          "quotation": 21,
+          "day": "1",
+          "date": "2026-02-02T12:00:08.812Z"
+        },
+        {
+          "name": "Lucas Chevalier",
+          "bid_price": 16,
+          "won_price": 20,
+          "quotation": 15,
+          "day": "2",
+          "date": "2026-02-02T12:12:40.729Z"
+        },
+        {
+          "name": "Moustapha Mbow",
+          "bid_price": 10,
+          "won_price": 12,
+          "quotation": 9,
+          "day": "2",
+          "date": "2026-02-02T12:12:40.729Z"
+        },
+        {
+          "name": "Amine Gouiri",
+          "bid_price": 8,
+          "won_price": 21,
+          "quotation": 7,
+          "day": "3",
+          "date": "2026-02-02T13:29:22.066Z"
+        }
+      ]
+    },
+    "Khamenei’s Kickers": {
+      "total_bids": 35,
+      "won_auctions": 23,
+      "lost_auctions": 12,
+      "total_spent": 500,
+      "players_won": [
+        {
+          "name": "Arsène Kouassi",
+          "price": 15,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -2
+        },
+        {
+          "name": "Jérémy Jacquet",
+          "price": 12,
+          "quotation": 10,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -2
+        },
+        {
+          "name": "Joaquín Panichelli",
+          "price": 68,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -48
+        },
+        {
+          "name": "Noah Nartey",
+          "price": 13,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -6
+        },
+        {
+          "name": "Matthis Abline",
+          "price": 47,
+          "quotation": 17,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -30
+        },
+        {
+          "name": "Elye Wahi",
+          "price": 27,
+          "quotation": 10,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -17
+        },
+        {
+          "name": "Estéban Lepaul",
+          "price": 47,
+          "quotation": 28,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -19
+        },
+        {
+          "name": "Sofiane Diop",
+          "price": 25,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -5
+        },
+        {
+          "name": "Régis Gurtner",
+          "price": 9,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -2
+        },
+        {
+          "name": "Romain Perraud",
+          "price": 15,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -2
+        },
+        {
+          "name": "Rasmus Nicolaisen",
+          "price": 14,
+          "quotation": 12,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -2
+        },
+        {
+          "name": "Jordan Lefort",
+          "price": 15,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z",
+          "value": -2
+        },
+        {
+          "name": "Mathys Silistre",
+          "price": 9,
+          "quotation": 7,
+          "day": "2",
+          "date": "2026-02-02T12:11:22.359Z",
+          "value": -2
+        },
+        {
+          "name": "Rémy Cabella",
+          "price": 17,
+          "quotation": 11,
+          "day": "2",
+          "date": "2026-02-02T12:11:22.359Z",
+          "value": -6
+        },
+        {
+          "name": "Moses Simon",
+          "price": 48,
+          "quotation": 18,
+          "day": "2",
+          "date": "2026-02-02T12:11:22.359Z",
+          "value": -30
+        },
+        {
+          "name": "Aleksandr Golovin",
+          "price": 38,
+          "quotation": 12,
+          "day": "2",
+          "date": "2026-02-02T12:11:22.359Z",
+          "value": -26
+        },
+        {
+          "name": "Brice Samba",
+          "price": 18,
+          "quotation": 16,
+          "day": "2",
+          "date": "2026-02-02T12:11:22.359Z",
+          "value": -2
+        },
+        {
+          "name": "Kojo Peprah Oppong",
+          "price": 6,
+          "quotation": 6,
+          "day": "3",
+          "date": "2026-02-02T13:43:12.053Z",
+          "value": 0
+        },
+        {
+          "name": "Branco van den Boomen",
+          "price": 15,
+          "quotation": 10,
+          "day": "3",
+          "date": "2026-02-02T13:43:12.053Z",
+          "value": -5
+        },
+        {
+          "name": "Santiago Hidalgo",
+          "price": 12,
+          "quotation": 12,
+          "day": "4",
+          "date": "2026-02-02T13:50:46.312Z",
+          "value": 0
+        },
+        {
+          "name": "None Afonso Moreira",
+          "price": 14,
+          "quotation": 13,
+          "day": "4",
+          "date": "2026-02-02T13:50:46.312Z",
+          "value": -1
+        },
+        {
+          "name": "None Mostafa Mohamed",
+          "price": 8,
+          "quotation": 8,
+          "day": "4",
+          "date": "2026-02-02T13:50:46.312Z",
+          "value": 0
+        },
+        {
+          "name": "Aiyegun Tosin",
+          "price": 8,
+          "quotation": 8,
+          "day": "4",
+          "date": "2026-02-02T13:50:46.312Z",
+          "value": 0
+        }
+      ],
+      "players_lost": [
+        {
+          "name": "Florian Thauvin",
+          "bid_price": 39,
+          "won_price": 50,
+          "quotation": 25,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z"
+        },
+        {
+          "name": "Robin Risser",
+          "bid_price": 21,
+          "won_price": 25,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z"
+        },
+        {
+          "name": "None Endrick",
+          "bid_price": 27,
+          "won_price": 76,
+          "quotation": 9,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z"
+        },
+        {
+          "name": "Ilan Kebbal",
+          "bid_price": 39,
+          "won_price": 42,
+          "quotation": 26,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z"
+        },
+        {
+          "name": "Diego Moreira",
+          "bid_price": 15,
+          "won_price": 22,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z"
+        },
+        {
+          "name": "Hákon Haraldsson",
+          "bid_price": 25,
+          "won_price": 48,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z"
+        },
+        {
+          "name": "Yann Gboho",
+          "bid_price": 27,
+          "won_price": 36,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:00:13.236Z"
+        },
+        {
+          "name": "Désiré Doué",
+          "bid_price": 48,
+          "won_price": 60,
+          "quotation": 21,
+          "day": "2",
+          "date": "2026-02-02T12:11:22.359Z"
+        },
+        {
+          "name": "Ousmane Ousmane Camara",
+          "bid_price": 15,
+          "won_price": 20,
+          "quotation": 15,
+          "day": "2",
+          "date": "2026-02-02T12:11:22.359Z"
+        },
+        {
+          "name": "Ethan Nwaneri",
+          "bid_price": 15,
+          "won_price": 35,
+          "quotation": 10,
+          "day": "3",
+          "date": "2026-02-02T13:43:12.053Z"
+        },
+        {
+          "name": "Amine Gouiri",
+          "bid_price": 15,
+          "won_price": 21,
+          "quotation": 7,
+          "day": "3",
+          "date": "2026-02-02T13:43:12.053Z"
+        },
+        {
+          "name": "Ainsley Maitland-Niles",
+          "bid_price": 12,
+          "won_price": 18,
+          "quotation": 12,
+          "day": "3",
+          "date": "2026-02-02T13:43:12.053Z"
+        }
+      ]
+    },
+    "🖕les balkaniques 🇦🇱": {
+      "total_bids": 42,
+      "won_auctions": 25,
+      "lost_auctions": 17,
+      "total_spent": 500,
+      "players_won": [
+        {
+          "name": "Pape Diop",
+          "price": 8,
+          "quotation": 8,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z",
+          "value": 0
+        },
+        {
+          "name": "Mathieu Gorgelin",
+          "price": 7,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z",
+          "value": 0
+        },
+        {
+          "name": "Ismaëlo Ganiou",
+          "price": 11,
+          "quotation": 11,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z",
+          "value": 0
+        },
+        {
+          "name": "Samson Baidoo",
+          "price": 25,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z",
+          "value": -6
+        },
+        {
+          "name": "Nayef Aguerd",
+          "price": 19,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z",
+          "value": -6
+        },
+        {
+          "name": "Odsonne Édouard",
+          "price": 44,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z",
+          "value": -24
+        },
+        {
+          "name": "None Emerson",
+          "price": 20,
+          "quotation": 14,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z",
+          "value": -6
+        },
+        {
+          "name": "Matias Fernandez-Pardo",
+          "price": 25,
+          "quotation": 10,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z",
+          "value": -15
+        },
+        {
+          "name": "Pierre-Emerick Aubameyang",
+          "price": 40,
+          "quotation": 19,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z",
+          "value": -21
+        },
+        {
+          "name": "Fodé Doucouré",
+          "price": 19,
+          "quotation": 12,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z",
+          "value": -7
+        },
+        {
+          "name": "Ousmane Ousmane Camara",
+          "price": 20,
+          "quotation": 15,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z",
+          "value": -5
+        },
+        {
+          "name": "Rassoul Ndiaye",
+          "price": 25,
+          "quotation": 15,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z",
+          "value": -10
+        },
+        {
+          "name": "Lucas Chevalier",
+          "price": 20,
+          "quotation": 15,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z",
+          "value": -5
+        },
+        {
+          "name": "Ansu Fati",
+          "price": 22,
+          "quotation": 9,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z",
+          "value": -13
+        },
+        {
+          "name": "Tyler Morton",
+          "price": 28,
+          "quotation": 14,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z",
+          "value": -14
+        },
+        {
+          "name": "Timothy Weah",
+          "price": 25,
+          "quotation": 13,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z",
+          "value": -12
+        },
+        {
+          "name": "Amir Murillo",
+          "price": 17,
+          "quotation": 10,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z",
+          "value": -7
+        },
+        {
+          "name": "Martial Godo",
+          "price": 17,
+          "quotation": 6,
+          "day": "3",
+          "date": "2026-02-02T13:27:48.919Z",
+          "value": -11
+        },
+        {
+          "name": "Guillaume Restes",
+          "price": 17,
+          "quotation": 16,
+          "day": "3",
+          "date": "2026-02-02T13:27:48.919Z",
+          "value": -1
+        },
+        {
+          "name": "Cristian Cásseres",
+          "price": 24,
+          "quotation": 13,
+          "day": "3",
+          "date": "2026-02-02T13:27:48.919Z",
+          "value": -11
+        },
+        {
+          "name": "Amine Gouiri",
+          "price": 21,
+          "quotation": 7,
+          "day": "3",
+          "date": "2026-02-02T13:27:48.919Z",
+          "value": -14
+        },
+        {
+          "name": "Valentin Rongier",
+          "price": 24,
+          "quotation": 17,
+          "day": "3",
+          "date": "2026-02-02T13:27:48.919Z",
+          "value": -7
+        },
+        {
+          "name": "Lamine Lamine Camara",
+          "price": 10,
+          "quotation": 9,
+          "day": "4",
+          "date": "2026-02-02T13:47:17.895Z",
+          "value": -1
+        },
+        {
+          "name": "None Otávio",
+          "price": 9,
+          "quotation": 9,
+          "day": "4",
+          "date": "2026-02-02T13:47:17.895Z",
+          "value": 0
+        },
+        {
+          "name": "Álex Domínguez",
+          "price": 3,
+          "quotation": 3,
+          "day": "4",
+          "date": "2026-02-02T13:47:17.895Z",
+          "value": 0
+        }
+      ],
+      "players_lost": [
+        {
+          "name": "Florian Thauvin",
+          "bid_price": 33,
+          "won_price": 50,
+          "quotation": 25,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Joaquín Panichelli",
+          "bid_price": 51,
+          "won_price": 68,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Robin Risser",
+          "bid_price": 25,
+          "won_price": 25,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Noah Nartey",
+          "bid_price": 7,
+          "won_price": 13,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Ilan Kebbal",
+          "bid_price": 35,
+          "won_price": 42,
+          "quotation": 26,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Hákon Haraldsson",
+          "bid_price": 30,
+          "won_price": 48,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Willian Pacho",
+          "bid_price": 12,
+          "won_price": 17,
+          "quotation": 12,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Régis Gurtner",
+          "bid_price": 7,
+          "won_price": 9,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Yann Gboho",
+          "bid_price": 30,
+          "won_price": 36,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Matthieu Udol",
+          "bid_price": 26,
+          "won_price": 32,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Mason Greenwood",
+          "bid_price": 65,
+          "won_price": 113,
+          "quotation": 40,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Wesley Saïd",
+          "bid_price": 45,
+          "won_price": 56,
+          "quotation": 21,
+          "day": "1",
+          "date": "2026-02-02T12:04:15.413Z"
+        },
+        {
+          "name": "Hamza Igamane",
+          "bid_price": 30,
+          "won_price": 51,
+          "quotation": 14,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z"
+        },
+        {
+          "name": "Emmanuel Emegha",
+          "bid_price": 35,
+          "won_price": 61,
+          "quotation": 22,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z"
+        },
+        {
+          "name": "Moses Simon",
+          "bid_price": 30,
+          "won_price": 48,
+          "quotation": 18,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z"
+        },
+        {
+          "name": "Pierre-Emile Højbjerg",
+          "bid_price": 30,
+          "won_price": 35,
+          "quotation": 19,
+          "day": "2",
+          "date": "2026-02-02T12:14:28.948Z"
+        },
+        {
+          "name": "Ethan Nwaneri",
+          "bid_price": 22,
+          "won_price": 35,
+          "quotation": 10,
+          "day": "3",
+          "date": "2026-02-02T13:27:48.919Z"
+        }
+      ]
+    },
+    "Al-Zahia FC": {
+      "total_bids": 29,
+      "won_auctions": 28,
+      "lost_auctions": 1,
+      "total_spent": 500,
+      "players_won": [
+        {
+          "name": "Jules Stawiecki",
+          "price": 1,
+          "quotation": 1,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": 0
+        },
+        {
+          "name": "Kenny Quetant",
+          "price": 1,
+          "quotation": 1,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": 0
+        },
+        {
+          "name": "Francis Coquelin",
+          "price": 1,
+          "quotation": 1,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": 0
+        },
+        {
+          "name": "Maghnes Akliouche",
+          "price": 36,
+          "quotation": 18,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -18
+        },
+        {
+          "name": "Théo Le Bris",
+          "price": 16,
+          "quotation": 12,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -4
+        },
+        {
+          "name": "None Emersonn",
+          "price": 21,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -8
+        },
+        {
+          "name": "Issa Soumaré",
+          "price": 14,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -1
+        },
+        {
+          "name": "Diego Moreira",
+          "price": 22,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -9
+        },
+        {
+          "name": "Julio Enciso",
+          "price": 16,
+          "quotation": 10,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -6
+        },
+        {
+          "name": "Olivier Giroud",
+          "price": 22,
+          "quotation": 15,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -7
+        },
+        {
+          "name": "Hamed Traoré",
+          "price": 5,
+          "quotation": 3,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -2
+        },
+        {
+          "name": "None Dante",
+          "price": 2,
+          "quotation": 1,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -1
+        },
+        {
+          "name": "Yann Gboho",
+          "price": 36,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -16
+        },
+        {
+          "name": "Facundo Medina",
+          "price": 7,
+          "quotation": 1,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -6
+        },
+        {
+          "name": "Mason Greenwood",
+          "price": 113,
+          "quotation": 40,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -73
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "price": 32,
+          "quotation": 27,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -5
+        },
+        {
+          "name": "Habib Diallo",
+          "price": 15,
+          "quotation": 12,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -3
+        },
+        {
+          "name": "Breel Embolo",
+          "price": 18,
+          "quotation": 14,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -4
+        },
+        {
+          "name": "Corentin Tolisso",
+          "price": 27,
+          "quotation": 26,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -1
+        },
+        {
+          "name": "Ludovic Ajorque",
+          "price": 26,
+          "quotation": 16,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -10
+        },
+        {
+          "name": "Przemyslaw Frankowski",
+          "price": 12,
+          "quotation": 9,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -3
+        },
+        {
+          "name": "Sofiane Boufal",
+          "price": 12,
+          "quotation": 10,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -2
+        },
+        {
+          "name": "Gerónimo Rulli",
+          "price": 22,
+          "quotation": 16,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z",
+          "value": -6
+        },
+        {
+          "name": "Elías Legendre",
+          "price": 1,
+          "quotation": 1,
+          "day": "2",
+          "date": "2026-02-02T12:14:59.906Z",
+          "value": 0
+        },
+        {
+          "name": "Nhoa Sangui",
+          "price": 6,
+          "quotation": 5,
+          "day": "2",
+          "date": "2026-02-02T12:14:59.906Z",
+          "value": -1
+        },
+        {
+          "name": "None Alexsandro Ribeiro",
+          "price": 1,
+          "quotation": 1,
+          "day": "2",
+          "date": "2026-02-02T12:14:59.906Z",
+          "value": 0
+        },
+        {
+          "name": "Jeffrey de Lange",
+          "price": 7,
+          "quotation": 7,
+          "day": "2",
+          "date": "2026-02-02T12:14:59.906Z",
+          "value": 0
+        },
+        {
+          "name": "Denis Zakaria",
+          "price": 8,
+          "quotation": 8,
+          "day": "2",
+          "date": "2026-02-02T12:14:59.906Z",
+          "value": 0
+        }
+      ],
+      "players_lost": [
+        {
+          "name": "Matthieu Udol",
+          "bid_price": 23,
+          "won_price": 32,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:00:21.579Z"
+        }
+      ]
+    },
+    "Spartak Amsterdam": {
+      "total_bids": 27,
+      "won_auctions": 20,
+      "lost_auctions": 7,
+      "total_spent": 500,
+      "players_won": [
+        {
+          "name": "Herba Guirassy",
+          "price": 10,
+          "quotation": 8,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": -2
+        },
+        {
+          "name": "Panos Katseris",
+          "price": 1,
+          "quotation": 1,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": 0
+        },
+        {
+          "name": "Charlie Cresswell",
+          "price": 19,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": 0
+        },
+        {
+          "name": "Gauthier Hein",
+          "price": 34,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": -15
+        },
+        {
+          "name": "Yehvann Yehvann Diouf",
+          "price": 15,
+          "quotation": 15,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": 0
+        },
+        {
+          "name": "Matthieu Udol",
+          "price": 32,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": -13
+        },
+        {
+          "name": "Romain Del Castillo",
+          "price": 56,
+          "quotation": 17,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": -39
+        },
+        {
+          "name": "Carlens Arcus",
+          "price": 18,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": -5
+        },
+        {
+          "name": "Wesley Saïd",
+          "price": 56,
+          "quotation": 21,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": -35
+        },
+        {
+          "name": "Takumi Minamino",
+          "price": 15,
+          "quotation": 15,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": 0
+        },
+        {
+          "name": "Adrien Thomasson",
+          "price": 34,
+          "quotation": 17,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": -17
+        },
+        {
+          "name": "Yvon Mvogo",
+          "price": 15,
+          "quotation": 15,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z",
+          "value": 0
+        },
+        {
+          "name": "Yassin Belkhdim",
+          "price": 29,
+          "quotation": 17,
+          "day": "2",
+          "date": "2026-02-02T12:07:56.658Z",
+          "value": -12
+        },
+        {
+          "name": "None João Neves",
+          "price": 43,
+          "quotation": 26,
+          "day": "2",
+          "date": "2026-02-02T12:07:56.658Z",
+          "value": -17
+        },
+        {
+          "name": "Illia Zabarnyi",
+          "price": 18,
+          "quotation": 12,
+          "day": "2",
+          "date": "2026-02-02T12:07:56.658Z",
+          "value": -6
+        },
+        {
+          "name": "Mark McKenzie",
+          "price": 18,
+          "quotation": 12,
+          "day": "2",
+          "date": "2026-02-02T12:07:56.658Z",
+          "value": -6
+        },
+        {
+          "name": "Pierre-Emile Højbjerg",
+          "price": 35,
+          "quotation": 19,
+          "day": "2",
+          "date": "2026-02-02T12:07:56.658Z",
+          "value": -16
+        },
+        {
+          "name": "Abdelhamid Aït Boudlal",
+          "price": 11,
+          "quotation": 11,
+          "day": "3",
+          "date": "2026-02-02T13:18:27.764Z",
+          "value": 0
+        },
+        {
+          "name": "Mohamed-Ali Cho",
+          "price": 31,
+          "quotation": 12,
+          "day": "3",
+          "date": "2026-02-02T13:18:27.764Z",
+          "value": -19
+        },
+        {
+          "name": "Willem Geubbels",
+          "price": 10,
+          "quotation": 9,
+          "day": "3",
+          "date": "2026-02-02T13:18:27.764Z",
+          "value": -1
+        }
+      ],
+      "players_lost": [
+        {
+          "name": "Joaquín Panichelli",
+          "bid_price": 56,
+          "won_price": 68,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z"
+        },
+        {
+          "name": "Valentín Barco",
+          "bid_price": 24,
+          "won_price": 24,
+          "quotation": 18,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z"
+        },
+        {
+          "name": "Ilan Kebbal",
+          "bid_price": 36,
+          "won_price": 42,
+          "quotation": 26,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z"
+        },
+        {
+          "name": "Hákon Haraldsson",
+          "bid_price": 34,
+          "won_price": 48,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z"
+        },
+        {
+          "name": "Pavel Sulc",
+          "bid_price": 34,
+          "won_price": 55,
+          "quotation": 17,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z"
+        },
+        {
+          "name": "None Nuno Mendes",
+          "bid_price": 11,
+          "won_price": 20,
+          "quotation": 11,
+          "day": "1",
+          "date": "2026-02-02T12:01:14.115Z"
+        },
+        {
+          "name": "None Igor Paixão",
+          "bid_price": 52,
+          "won_price": 81,
+          "quotation": 17,
+          "day": "2",
+          "date": "2026-02-02T12:07:56.658Z"
+        }
+      ]
+    },
+    "Humbled FC": {
+      "total_bids": 37,
+      "won_auctions": 20,
+      "lost_auctions": 17,
+      "total_spent": 500,
+      "players_won": [
+        {
+          "name": "Rémi Himbert",
+          "price": 5,
+          "quotation": 1,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z",
+          "value": -4
+        },
+        {
+          "name": "Valentín Barco",
+          "price": 24,
+          "quotation": 18,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z",
+          "value": -6
+        },
+        {
+          "name": "Ilan Kebbal",
+          "price": 42,
+          "quotation": 26,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z",
+          "value": -16
+        },
+        {
+          "name": "Guéla Doué",
+          "price": 15,
+          "quotation": 11,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z",
+          "value": -4
+        },
+        {
+          "name": "Bradley Barcola",
+          "price": 48,
+          "quotation": 27,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z",
+          "value": -21
+        },
+        {
+          "name": "Pavel Sulc",
+          "price": 55,
+          "quotation": 17,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z",
+          "value": -38
+        },
+        {
+          "name": "Himad Abdelli",
+          "price": 16,
+          "quotation": 16,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z",
+          "value": 0
+        },
+        {
+          "name": "None Lee Kang-In",
+          "price": 24,
+          "quotation": 16,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z",
+          "value": -8
+        },
+        {
+          "name": "Ben Chilwell",
+          "price": 11,
+          "quotation": 9,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z",
+          "value": -2
+        },
+        {
+          "name": "Aïssa Mandi",
+          "price": 14,
+          "quotation": 13,
+          "day": "2",
+          "date": "2026-02-02T13:16:27.843Z",
+          "value": -1
+        },
+        {
+          "name": "Quentin Merlin",
+          "price": 15,
+          "quotation": 12,
+          "day": "2",
+          "date": "2026-02-02T13:16:27.843Z",
+          "value": -3
+        },
+        {
+          "name": "Folarin Balogun",
+          "price": 20,
+          "quotation": 12,
+          "day": "2",
+          "date": "2026-02-02T13:16:27.843Z",
+          "value": -8
+        },
+        {
+          "name": "Rémy Descamps",
+          "price": 7,
+          "quotation": 7,
+          "day": "2",
+          "date": "2026-02-02T13:16:27.843Z",
+          "value": 0
+        },
+        {
+          "name": "Benjamin Pavard",
+          "price": 19,
+          "quotation": 16,
+          "day": "2",
+          "date": "2026-02-02T13:16:27.843Z",
+          "value": -3
+        },
+        {
+          "name": "None Gonçalo Ramos",
+          "price": 40,
+          "quotation": 18,
+          "day": "3",
+          "date": "2026-02-02T13:19:10.038Z",
+          "value": -22
+        },
+        {
+          "name": "Mika Biereth",
+          "price": 22,
+          "quotation": 18,
+          "day": "3",
+          "date": "2026-02-02T13:19:10.038Z",
+          "value": -4
+        },
+        {
+          "name": "None Vitinha",
+          "price": 68,
+          "quotation": 30,
+          "day": "3",
+          "date": "2026-02-02T13:19:10.038Z",
+          "value": -38
+        },
+        {
+          "name": "Fabián Ruiz",
+          "price": 31,
+          "quotation": 14,
+          "day": "3",
+          "date": "2026-02-02T13:19:10.038Z",
+          "value": -17
+        },
+        {
+          "name": "Lionel Mpasi",
+          "price": 7,
+          "quotation": 7,
+          "day": "3",
+          "date": "2026-02-02T13:19:10.038Z",
+          "value": 0
+        },
+        {
+          "name": "Mory Diaw",
+          "price": 17,
+          "quotation": 16,
+          "day": "3",
+          "date": "2026-02-02T13:19:10.038Z",
+          "value": -1
+        }
+      ],
+      "players_lost": [
+        {
+          "name": "Karl-Johan Johnsson",
+          "bid_price": 7,
+          "won_price": 7,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "None Endrick",
+          "bid_price": 65,
+          "won_price": 76,
+          "quotation": 9,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "Malick Fofana",
+          "bid_price": 12,
+          "won_price": 22,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "Mike Penders",
+          "bid_price": 17,
+          "won_price": 17,
+          "quotation": 16,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "Ruben Kluivert",
+          "bid_price": 10,
+          "won_price": 12,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "Elye Wahi",
+          "bid_price": 21,
+          "won_price": 27,
+          "quotation": 10,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "Estéban Lepaul",
+          "bid_price": 32,
+          "won_price": 47,
+          "quotation": 28,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "Romain Faivre",
+          "bid_price": 8,
+          "won_price": 9,
+          "quotation": 8,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "Yann Gboho",
+          "bid_price": 22,
+          "won_price": 36,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "Jonathan Clauss",
+          "bid_price": 10,
+          "won_price": 14,
+          "quotation": 10,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "Nayef Aguerd",
+          "bid_price": 16,
+          "won_price": 19,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "Odsonne Édouard",
+          "bid_price": 40,
+          "won_price": 44,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:01:05.159Z"
+        },
+        {
+          "name": "Désiré Doué",
+          "bid_price": 60,
+          "won_price": 60,
+          "quotation": 21,
+          "day": "2",
+          "date": "2026-02-02T13:16:27.843Z"
+        },
+        {
+          "name": "Pierre-Emerick Aubameyang",
+          "bid_price": 21,
+          "won_price": 40,
+          "quotation": 19,
+          "day": "2",
+          "date": "2026-02-02T13:16:27.843Z"
+        },
+        {
+          "name": "Emmanuel Emegha",
+          "bid_price": 46,
+          "won_price": 61,
+          "quotation": 22,
+          "day": "2",
+          "date": "2026-02-02T13:16:27.843Z"
+        },
+        {
+          "name": "None Igor Paixão",
+          "bid_price": 40,
+          "won_price": 81,
+          "quotation": 17,
+          "day": "2",
+          "date": "2026-02-02T13:16:27.843Z"
+        },
+        {
+          "name": "Dominik Greif",
+          "bid_price": 18,
+          "won_price": 18,
+          "quotation": 18,
+          "day": "2",
+          "date": "2026-02-02T13:16:27.843Z"
+        }
+      ]
+    },
+    "Gasprom": {
+      "total_bids": 28,
+      "won_auctions": 19,
+      "lost_auctions": 9,
+      "total_spent": 500,
+      "players_won": [
+        {
+          "name": "Ibrahim Mbaye",
+          "price": 14,
+          "quotation": 11,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -3
+        },
+        {
+          "name": "Warren Zaïre-Emery",
+          "price": 21,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -8
+        },
+        {
+          "name": "None Beraldo",
+          "price": 12,
+          "quotation": 9,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -3
+        },
+        {
+          "name": "Senny Mayulu",
+          "price": 18,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -5
+        },
+        {
+          "name": "Melvin Zinga",
+          "price": 10,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -3
+        },
+        {
+          "name": "None Abner Vinícius",
+          "price": 18,
+          "quotation": 10,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -8
+        },
+        {
+          "name": "None Nuno Mendes",
+          "price": 20,
+          "quotation": 11,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -9
+        },
+        {
+          "name": "Willian Pacho",
+          "price": 17,
+          "quotation": 12,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -5
+        },
+        {
+          "name": "Hervé Koffi",
+          "price": 26,
+          "quotation": 18,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -8
+        },
+        {
+          "name": "Achraf Hakimi",
+          "price": 18,
+          "quotation": 8,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -10
+        },
+        {
+          "name": "Moussa Niakhaté",
+          "price": 18,
+          "quotation": 16,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -2
+        },
+        {
+          "name": "None Marquinhos",
+          "price": 18,
+          "quotation": 9,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z",
+          "value": -9
+        },
+        {
+          "name": "Benjamin André",
+          "price": 16,
+          "quotation": 16,
+          "day": "2",
+          "date": "2026-02-02T12:18:14.602Z",
+          "value": 0
+        },
+        {
+          "name": "Hamza Igamane",
+          "price": 51,
+          "quotation": 14,
+          "day": "2",
+          "date": "2026-02-02T12:18:14.602Z",
+          "value": -37
+        },
+        {
+          "name": "Emmanuel Emegha",
+          "price": 61,
+          "quotation": 22,
+          "day": "2",
+          "date": "2026-02-02T12:18:14.602Z",
+          "value": -39
+        },
+        {
+          "name": "None Igor Paixão",
+          "price": 81,
+          "quotation": 17,
+          "day": "2",
+          "date": "2026-02-02T12:18:14.602Z",
+          "value": -64
+        },
+        {
+          "name": "None Félix Correia",
+          "price": 32,
+          "quotation": 14,
+          "day": "2",
+          "date": "2026-02-02T12:18:14.602Z",
+          "value": -18
+        },
+        {
+          "name": "Ludovic Blas",
+          "price": 34,
+          "quotation": 19,
+          "day": "2",
+          "date": "2026-02-02T12:18:14.602Z",
+          "value": -15
+        },
+        {
+          "name": "Angel Gomes",
+          "price": 15,
+          "quotation": 15,
+          "day": "2",
+          "date": "2026-02-02T12:18:14.602Z",
+          "value": 0
+        }
+      ],
+      "players_lost": [
+        {
+          "name": "None Endrick",
+          "bid_price": 72,
+          "won_price": 76,
+          "quotation": 9,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z"
+        },
+        {
+          "name": "Pablo Pagis",
+          "bid_price": 23,
+          "won_price": 34,
+          "quotation": 15,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z"
+        },
+        {
+          "name": "Ilan Kebbal",
+          "bid_price": 30,
+          "won_price": 42,
+          "quotation": 26,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z"
+        },
+        {
+          "name": "Hákon Haraldsson",
+          "bid_price": 24,
+          "won_price": 48,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z"
+        },
+        {
+          "name": "Lassine Sinayoko",
+          "bid_price": 31,
+          "won_price": 32,
+          "quotation": 22,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z"
+        },
+        {
+          "name": "Yann Gboho",
+          "bid_price": 28,
+          "won_price": 36,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z"
+        },
+        {
+          "name": "Romain Del Castillo",
+          "bid_price": 28,
+          "won_price": 56,
+          "quotation": 17,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z"
+        },
+        {
+          "name": "Wesley Saïd",
+          "bid_price": 36,
+          "won_price": 56,
+          "quotation": 21,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z"
+        },
+        {
+          "name": "Adrien Thomasson",
+          "bid_price": 18,
+          "won_price": 34,
+          "quotation": 17,
+          "day": "1",
+          "date": "2026-02-02T12:00:28.901Z"
+        }
+      ]
+    },
+    "Thermik Wonder Team": {
+      "total_bids": 46,
+      "won_auctions": 23,
+      "lost_auctions": 23,
+      "total_spent": 500,
+      "players_won": [
+        {
+          "name": "Robin Risser",
+          "price": 25,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z",
+          "value": -6
+        },
+        {
+          "name": "Hákon Haraldsson",
+          "price": 48,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z",
+          "value": -29
+        },
+        {
+          "name": "Lassine Sinayoko",
+          "price": 32,
+          "quotation": 22,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z",
+          "value": -10
+        },
+        {
+          "name": "Aron Dønnum",
+          "price": 25,
+          "quotation": 16,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z",
+          "value": -9
+        },
+        {
+          "name": "Jonathan Clauss",
+          "price": 14,
+          "quotation": 10,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z",
+          "value": -4
+        },
+        {
+          "name": "Malang Sarr",
+          "price": 20,
+          "quotation": 16,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z",
+          "value": -4
+        },
+        {
+          "name": "Ruben Aguilar",
+          "price": 21,
+          "quotation": 15,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z",
+          "value": -6
+        },
+        {
+          "name": "Frank Magri",
+          "price": 44,
+          "quotation": 10,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z",
+          "value": -34
+        },
+        {
+          "name": "Kamory Kamory Doumbia",
+          "price": 32,
+          "quotation": 16,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z",
+          "value": -16
+        },
+        {
+          "name": "Mamadou Sangaré",
+          "price": 34,
+          "quotation": 15,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z",
+          "value": -19
+        },
+        {
+          "name": "Moustapha Mbow",
+          "price": 12,
+          "quotation": 9,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z",
+          "value": -3
+        },
+        {
+          "name": "Dominik Greif",
+          "price": 18,
+          "quotation": 18,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z",
+          "value": 0
+        },
+        {
+          "name": "Brendan Chardonnet",
+          "price": 16,
+          "quotation": 13,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z",
+          "value": -3
+        },
+        {
+          "name": "Ethan Nwaneri",
+          "price": 35,
+          "quotation": 10,
+          "day": "3",
+          "date": "2026-02-02T13:21:24.454Z",
+          "value": -25
+        },
+        {
+          "name": "Khvicha Kvaratskhelia",
+          "price": 30,
+          "quotation": 24,
+          "day": "3",
+          "date": "2026-02-02T13:21:24.454Z",
+          "value": -6
+        },
+        {
+          "name": "Djibril Sidibé",
+          "price": 17,
+          "quotation": 17,
+          "day": "3",
+          "date": "2026-02-02T13:21:24.454Z",
+          "value": 0
+        },
+        {
+          "name": "Louis Mouton",
+          "price": 13,
+          "quotation": 12,
+          "day": "4",
+          "date": "2026-02-02T14:00:58.889Z",
+          "value": -1
+        },
+        {
+          "name": "Bamba Dieng",
+          "price": 4,
+          "quotation": 4,
+          "day": "4",
+          "date": "2026-02-02T14:00:58.889Z",
+          "value": 0
+        },
+        {
+          "name": "Joris Chotard",
+          "price": 13,
+          "quotation": 12,
+          "day": "4",
+          "date": "2026-02-02T14:00:58.889Z",
+          "value": -1
+        },
+        {
+          "name": "Giorgi Tsitaishvili",
+          "price": 20,
+          "quotation": 17,
+          "day": "4",
+          "date": "2026-02-02T14:00:58.889Z",
+          "value": -3
+        },
+        {
+          "name": "None Mousa Tamari",
+          "price": 15,
+          "quotation": 14,
+          "day": "4",
+          "date": "2026-02-02T14:00:58.889Z",
+          "value": -1
+        },
+        {
+          "name": "Lucas Gourna-Douath",
+          "price": 7,
+          "quotation": 7,
+          "day": "5",
+          "date": "2026-02-02T14:03:39.997Z",
+          "value": 0
+        },
+        {
+          "name": "Naouirou Ahamada",
+          "price": 5,
+          "quotation": 5,
+          "day": "5",
+          "date": "2026-02-02T14:03:39.997Z",
+          "value": 0
+        }
+      ],
+      "players_lost": [
+        {
+          "name": "Jérémy Jacquet",
+          "bid_price": 10,
+          "won_price": 12,
+          "quotation": 10,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Joaquín Panichelli",
+          "bid_price": 52,
+          "won_price": 68,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Warren Zaïre-Emery",
+          "bid_price": 15,
+          "won_price": 21,
+          "quotation": 13,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Samson Baidoo",
+          "bid_price": 23,
+          "won_price": 25,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Estéban Lepaul",
+          "bid_price": 35,
+          "won_price": 47,
+          "quotation": 28,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Régis Gurtner",
+          "bid_price": 9,
+          "won_price": 9,
+          "quotation": 7,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Yann Gboho",
+          "bid_price": 26,
+          "won_price": 36,
+          "quotation": 20,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Gauthier Hein",
+          "bid_price": 25,
+          "won_price": 34,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Matthieu Udol",
+          "bid_price": 23,
+          "won_price": 32,
+          "quotation": 19,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Romain Del Castillo",
+          "bid_price": 25,
+          "won_price": 56,
+          "quotation": 17,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Wesley Saïd",
+          "bid_price": 45,
+          "won_price": 56,
+          "quotation": 21,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Adrien Thomasson",
+          "bid_price": 27,
+          "won_price": 34,
+          "quotation": 17,
+          "day": "1",
+          "date": "2026-02-02T12:01:07.574Z"
+        },
+        {
+          "name": "Sidiki Cherif",
+          "bid_price": 17,
+          "won_price": 28,
+          "quotation": 14,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z"
+        },
+        {
+          "name": "Pierre-Emerick Aubameyang",
+          "bid_price": 21,
+          "won_price": 40,
+          "quotation": 19,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z"
+        },
+        {
+          "name": "Ousmane Ousmane Camara",
+          "bid_price": 18,
+          "won_price": 20,
+          "quotation": 15,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z"
+        },
+        {
+          "name": "Emmanuel Emegha",
+          "bid_price": 50,
+          "won_price": 61,
+          "quotation": 22,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z"
+        },
+        {
+          "name": "Rassoul Ndiaye",
+          "bid_price": 16,
+          "won_price": 25,
+          "quotation": 15,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z"
+        },
+        {
+          "name": "Tyler Morton",
+          "bid_price": 25,
+          "won_price": 28,
+          "quotation": 14,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z"
+        },
+        {
+          "name": "Danny Namaso",
+          "bid_price": 12,
+          "won_price": 20,
+          "quotation": 10,
+          "day": "2",
+          "date": "2026-02-02T13:06:51.904Z"
+        },
+        {
+          "name": "Mohamed-Ali Cho",
+          "bid_price": 22,
+          "won_price": 31,
+          "quotation": 12,
+          "day": "3",
+          "date": "2026-02-02T13:21:24.454Z"
+        },
+        {
+          "name": "None Vitinha",
+          "bid_price": 43,
+          "won_price": 68,
+          "quotation": 30,
+          "day": "3",
+          "date": "2026-02-02T13:21:24.454Z"
+        },
+        {
+          "name": "Ainsley Maitland-Niles",
+          "bid_price": 12,
+          "won_price": 18,
+          "quotation": 12,
+          "day": "3",
+          "date": "2026-02-02T13:21:24.454Z"
+        },
+        {
+          "name": "Santiago Hidalgo",
+          "bid_price": 12,
+          "won_price": 12,
+          "quotation": 12,
+          "day": "4",
+          "date": "2026-02-02T14:00:58.889Z"
+        }
+      ]
+    }
+  }
+}
