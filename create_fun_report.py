@@ -161,6 +161,12 @@ class FunReportGenerator:
                     self.team_stats[team_id]['clubs_represented'].add(club_name)
                 self.team_stats[team_id]['positions'][player_info['position']] += 1
 
+                # Process lost bids - these teams bid but didn't win
+                for lost_bid in lost_bids:
+                    loser_id = lost_bid.get('teamId')
+                    if loser_id:
+                        self.team_stats[loser_id]['total_bids'] += 1
+
         print("✓ Analysis complete\n")
 
     def calculate_team_scores(self):
