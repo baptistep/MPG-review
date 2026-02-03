@@ -795,42 +795,61 @@ class FunReportGenerator:
             margin: 25px 0;
         }
 
-        .position-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+        .position-bars {
             margin: 20px 0;
         }
 
-        .position-card {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
+        .position-row {
+            margin: 15px 0;
         }
 
-        .position-label {
-            font-size: 0.9em;
-            color: #7f8c8d;
+        .position-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 8px;
         }
 
-        .position-value {
-            font-size: 1.6em;
-            font-weight: 700;
-            color: #3498db;
+        .position-label {
+            font-size: 1em;
+            font-weight: 600;
+            color: #2c3e50;
         }
 
-        .position-sub {
-            font-size: 0.85em;
-            color: #95a5a6;
-            margin-top: 4px;
+        .position-stats {
+            font-size: 0.9em;
+            color: #7f8c8d;
         }
+
+        .bar-container {
+            background: #ecf0f1;
+            border-radius: 8px;
+            height: 32px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: width 0.3s ease;
+        }
+
+        .bar-gk { background: #9b59b6; }
+        .bar-def { background: #3498db; }
+        .bar-mid { background: #2ecc71; }
+        .bar-fwd { background: #e74c3c; }
 
         @media (max-width: 768px) {
             h1 { font-size: 1.8em; }
             .podium { grid-template-columns: 1fr; }
-            .position-grid { grid-template-columns: repeat(2, 1fr); }
+            .position-header { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -884,22 +903,33 @@ class FunReportGenerator:
                     <div class="profile-title">{team['name']}</div>
                     <div style="color: #7f8c8d;">Total: {total_spent}€</div>
                 </div>
-                <div class="position-grid">
+                <div class="position-bars">
 '''
 
-            for pos in ['GK', 'DEF', 'MID', 'FWD']:
+            position_data = [
+                ('GK', '🧤', 'bar-gk'),
+                ('DEF', '🛡️', 'bar-def'),
+                ('MID', '⚙️', 'bar-mid'),
+                ('FWD', '⚽', 'bar-fwd')
+            ]
+
+            for pos, emoji, bar_class in position_data:
                 spent = spending[pos]['spent']
                 count = spending[pos]['count']
                 pct = (spent / total_spent * 100) if total_spent > 0 else 0
                 avg = (spent / count) if count > 0 else 0
 
-                emoji = {'GK': '🧤', 'DEF': '🛡️', 'MID': '⚙️', 'FWD': '⚽'}
-
                 html += f'''
-                    <div class="position-card">
-                        <div class="position-label">{emoji[pos]} {pos}</div>
-                        <div class="position-value">{spent}€</div>
-                        <div class="position-sub">{pct:.0f}% • {count} players • {avg:.0f}€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">{emoji} {pos}</div>
+                            <div class="position-stats">{spent}€ • {count} players • {avg:.0f}€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill {bar_class}" style="width: {pct:.1f}%">
+                                {pct:.0f}%
+                            </div>
+                        </div>
                     </div>
 '''
 

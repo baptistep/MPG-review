@@ -194,42 +194,61 @@
             margin: 25px 0;
         }
 
-        .position-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+        .position-bars {
             margin: 20px 0;
         }
 
-        .position-card {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
+        .position-row {
+            margin: 15px 0;
         }
 
-        .position-label {
-            font-size: 0.9em;
-            color: #7f8c8d;
+        .position-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 8px;
         }
 
-        .position-value {
-            font-size: 1.6em;
-            font-weight: 700;
-            color: #3498db;
+        .position-label {
+            font-size: 1em;
+            font-weight: 600;
+            color: #2c3e50;
         }
 
-        .position-sub {
-            font-size: 0.85em;
-            color: #95a5a6;
-            margin-top: 4px;
+        .position-stats {
+            font-size: 0.9em;
+            color: #7f8c8d;
         }
+
+        .bar-container {
+            background: #ecf0f1;
+            border-radius: 8px;
+            height: 32px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: width 0.3s ease;
+        }
+
+        .bar-gk { background: #9b59b6; }
+        .bar-def { background: #3498db; }
+        .bar-mid { background: #2ecc71; }
+        .bar-fwd { background: #e74c3c; }
 
         @media (max-width: 768px) {
             h1 { font-size: 1.8em; }
             .podium { grid-template-columns: 1fr; }
-            .position-grid { grid-template-columns: repeat(2, 1fr); }
+            .position-header { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -280,30 +299,54 @@
                     <div class="profile-title">Al-Zahia FC</div>
                     <div style="color: #7f8c8d;">Total: 500€</div>
                 </div>
-                <div class="position-grid">
+                <div class="position-bars">
 
-                    <div class="position-card">
-                        <div class="position-label">🧤 GK</div>
-                        <div class="position-value">30€</div>
-                        <div class="position-sub">6% • 3 players • 10€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🧤 GK</div>
+                            <div class="position-stats">30€ • 3 players • 10€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-gk" style="width: 6.0%">
+                                6%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">🛡️ DEF</div>
-                        <div class="position-value">66€</div>
-                        <div class="position-sub">13% • 7 players • 9€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🛡️ DEF</div>
+                            <div class="position-stats">66€ • 7 players • 9€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-def" style="width: 13.2%">
+                                13%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚙️ MID</div>
-                        <div class="position-value">141€</div>
-                        <div class="position-sub">28% • 8 players • 18€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚙️ MID</div>
+                            <div class="position-stats">141€ • 8 players • 18€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-mid" style="width: 28.2%">
+                                28%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚽ FWD</div>
-                        <div class="position-value">263€</div>
-                        <div class="position-sub">53% • 10 players • 26€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚽ FWD</div>
+                            <div class="position-stats">263€ • 10 players • 26€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-fwd" style="width: 52.6%">
+                                53%
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -314,30 +357,54 @@
                     <div class="profile-title">Khamenei’s Kickers</div>
                     <div style="color: #7f8c8d;">Total: 500€</div>
                 </div>
-                <div class="position-grid">
+                <div class="position-bars">
 
-                    <div class="position-card">
-                        <div class="position-label">🧤 GK</div>
-                        <div class="position-value">36€</div>
-                        <div class="position-sub">7% • 3 players • 12€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🧤 GK</div>
+                            <div class="position-stats">36€ • 3 players • 12€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-gk" style="width: 7.2%">
+                                7%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">🛡️ DEF</div>
-                        <div class="position-value">77€</div>
-                        <div class="position-sub">15% • 6 players • 13€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🛡️ DEF</div>
+                            <div class="position-stats">77€ • 6 players • 13€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-def" style="width: 15.4%">
+                                15%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚙️ MID</div>
-                        <div class="position-value">156€</div>
-                        <div class="position-sub">31% • 6 players • 26€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚙️ MID</div>
+                            <div class="position-stats">156€ • 6 players • 26€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-mid" style="width: 31.2%">
+                                31%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚽ FWD</div>
-                        <div class="position-value">231€</div>
-                        <div class="position-sub">46% • 8 players • 29€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚽ FWD</div>
+                            <div class="position-stats">231€ • 8 players • 29€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-fwd" style="width: 46.2%">
+                                46%
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -348,30 +415,54 @@
                     <div class="profile-title">Spartak Amsterdam</div>
                     <div style="color: #7f8c8d;">Total: 500€</div>
                 </div>
-                <div class="position-grid">
+                <div class="position-bars">
 
-                    <div class="position-card">
-                        <div class="position-label">🧤 GK</div>
-                        <div class="position-value">30€</div>
-                        <div class="position-sub">6% • 2 players • 15€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🧤 GK</div>
+                            <div class="position-stats">30€ • 2 players • 15€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-gk" style="width: 6.0%">
+                                6%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">🛡️ DEF</div>
-                        <div class="position-value">117€</div>
-                        <div class="position-sub">23% • 7 players • 17€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🛡️ DEF</div>
+                            <div class="position-stats">117€ • 7 players • 17€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-def" style="width: 23.4%">
+                                23%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚙️ MID</div>
-                        <div class="position-value">190€</div>
-                        <div class="position-sub">38% • 6 players • 32€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚙️ MID</div>
+                            <div class="position-stats">190€ • 6 players • 32€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-mid" style="width: 38.0%">
+                                38%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚽ FWD</div>
-                        <div class="position-value">163€</div>
-                        <div class="position-sub">33% • 5 players • 33€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚽ FWD</div>
+                            <div class="position-stats">163€ • 5 players • 33€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-fwd" style="width: 32.6%">
+                                33%
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -382,30 +473,54 @@
                     <div class="profile-title">🖕les balkaniques 🇦🇱</div>
                     <div style="color: #7f8c8d;">Total: 500€</div>
                 </div>
-                <div class="position-grid">
+                <div class="position-bars">
 
-                    <div class="position-card">
-                        <div class="position-label">🧤 GK</div>
-                        <div class="position-value">47€</div>
-                        <div class="position-sub">9% • 4 players • 12€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🧤 GK</div>
+                            <div class="position-stats">47€ • 4 players • 12€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-gk" style="width: 9.4%">
+                                9%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">🛡️ DEF</div>
-                        <div class="position-value">140€</div>
-                        <div class="position-sub">28% • 8 players • 18€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🛡️ DEF</div>
+                            <div class="position-stats">140€ • 8 players • 18€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-def" style="width: 28.0%">
+                                28%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚙️ MID</div>
-                        <div class="position-value">144€</div>
-                        <div class="position-sub">29% • 7 players • 21€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚙️ MID</div>
+                            <div class="position-stats">144€ • 7 players • 21€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-mid" style="width: 28.8%">
+                                29%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚽ FWD</div>
-                        <div class="position-value">169€</div>
-                        <div class="position-sub">34% • 6 players • 28€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚽ FWD</div>
+                            <div class="position-stats">169€ • 6 players • 28€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-fwd" style="width: 33.8%">
+                                34%
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -416,30 +531,54 @@
                     <div class="profile-title">Humbled FC</div>
                     <div style="color: #7f8c8d;">Total: 500€</div>
                 </div>
-                <div class="position-grid">
+                <div class="position-bars">
 
-                    <div class="position-card">
-                        <div class="position-label">🧤 GK</div>
-                        <div class="position-value">31€</div>
-                        <div class="position-sub">6% • 3 players • 10€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🧤 GK</div>
+                            <div class="position-stats">31€ • 3 players • 10€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-gk" style="width: 6.2%">
+                                6%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">🛡️ DEF</div>
-                        <div class="position-value">98€</div>
-                        <div class="position-sub">20% • 6 players • 16€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🛡️ DEF</div>
+                            <div class="position-stats">98€ • 6 players • 16€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-def" style="width: 19.6%">
+                                20%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚙️ MID</div>
-                        <div class="position-value">241€</div>
-                        <div class="position-sub">48% • 7 players • 34€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚙️ MID</div>
+                            <div class="position-stats">241€ • 7 players • 34€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-mid" style="width: 48.2%">
+                                48%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚽ FWD</div>
-                        <div class="position-value">130€</div>
-                        <div class="position-sub">26% • 4 players • 32€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚽ FWD</div>
+                            <div class="position-stats">130€ • 4 players • 32€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-fwd" style="width: 26.0%">
+                                26%
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -450,30 +589,54 @@
                     <div class="profile-title">Thermik Wonder Team</div>
                     <div style="color: #7f8c8d;">Total: 500€</div>
                 </div>
-                <div class="position-grid">
+                <div class="position-bars">
 
-                    <div class="position-card">
-                        <div class="position-label">🧤 GK</div>
-                        <div class="position-value">43€</div>
-                        <div class="position-sub">9% • 2 players • 22€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🧤 GK</div>
+                            <div class="position-stats">43€ • 2 players • 22€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-gk" style="width: 8.6%">
+                                9%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">🛡️ DEF</div>
-                        <div class="position-value">100€</div>
-                        <div class="position-sub">20% • 6 players • 17€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🛡️ DEF</div>
+                            <div class="position-stats">100€ • 6 players • 17€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-def" style="width: 20.0%">
+                                20%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚙️ MID</div>
-                        <div class="position-value">212€</div>
-                        <div class="position-sub">42% • 9 players • 24€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚙️ MID</div>
+                            <div class="position-stats">212€ • 9 players • 24€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-mid" style="width: 42.4%">
+                                42%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚽ FWD</div>
-                        <div class="position-value">145€</div>
-                        <div class="position-sub">29% • 6 players • 24€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚽ FWD</div>
+                            <div class="position-stats">145€ • 6 players • 24€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-fwd" style="width: 29.0%">
+                                29%
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -484,30 +647,54 @@
                     <div class="profile-title">Gasprom</div>
                     <div style="color: #7f8c8d;">Total: 500€</div>
                 </div>
-                <div class="position-grid">
+                <div class="position-bars">
 
-                    <div class="position-card">
-                        <div class="position-label">🧤 GK</div>
-                        <div class="position-value">36€</div>
-                        <div class="position-sub">7% • 2 players • 18€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🧤 GK</div>
+                            <div class="position-stats">36€ • 2 players • 18€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-gk" style="width: 7.2%">
+                                7%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">🛡️ DEF</div>
-                        <div class="position-value">121€</div>
-                        <div class="position-sub">24% • 7 players • 17€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🛡️ DEF</div>
+                            <div class="position-stats">121€ • 7 players • 17€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-def" style="width: 24.2%">
+                                24%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚙️ MID</div>
-                        <div class="position-value">136€</div>
-                        <div class="position-sub">27% • 6 players • 23€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚙️ MID</div>
+                            <div class="position-stats">136€ • 6 players • 23€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-mid" style="width: 27.2%">
+                                27%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚽ FWD</div>
-                        <div class="position-value">207€</div>
-                        <div class="position-sub">41% • 4 players • 52€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚽ FWD</div>
+                            <div class="position-stats">207€ • 4 players • 52€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-fwd" style="width: 41.4%">
+                                41%
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -518,30 +705,54 @@
                     <div class="profile-title">TightOffsideFC</div>
                     <div style="color: #7f8c8d;">Total: 500€</div>
                 </div>
-                <div class="position-grid">
+                <div class="position-bars">
 
-                    <div class="position-card">
-                        <div class="position-label">🧤 GK</div>
-                        <div class="position-value">36€</div>
-                        <div class="position-sub">7% • 3 players • 12€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🧤 GK</div>
+                            <div class="position-stats">36€ • 3 players • 12€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-gk" style="width: 7.2%">
+                                7%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">🛡️ DEF</div>
-                        <div class="position-value">100€</div>
-                        <div class="position-sub">20% • 8 players • 12€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">🛡️ DEF</div>
+                            <div class="position-stats">100€ • 8 players • 12€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-def" style="width: 20.0%">
+                                20%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚙️ MID</div>
-                        <div class="position-value">172€</div>
-                        <div class="position-sub">34% • 7 players • 25€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚙️ MID</div>
+                            <div class="position-stats">172€ • 7 players • 25€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-mid" style="width: 34.4%">
+                                34%
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="position-card">
-                        <div class="position-label">⚽ FWD</div>
-                        <div class="position-value">192€</div>
-                        <div class="position-sub">38% • 6 players • 32€ avg</div>
+                    <div class="position-row">
+                        <div class="position-header">
+                            <div class="position-label">⚽ FWD</div>
+                            <div class="position-stats">192€ • 6 players • 32€ avg</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill bar-fwd" style="width: 38.4%">
+                                38%
+                            </div>
+                        </div>
                     </div>
 
                 </div>
