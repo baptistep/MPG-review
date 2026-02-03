@@ -198,6 +198,22 @@ class FunReportGenerator:
             total_value_lost = sum(p['value'] for p in stats['players_won'])
             value_efficiency = total_value_lost / num_players if num_players > 0 else 0
 
+            # Calculate spending by position
+            spending_by_position = {
+                'GK': {'spent': 0, 'count': 0},
+                'DEF': {'spent': 0, 'count': 0},
+                'MID': {'spent': 0, 'count': 0},
+                'FWD': {'spent': 0, 'count': 0}
+            }
+
+            position_map = {1: 'GK', 2: 'DEF', 3: 'MID', 4: 'FWD'}
+
+            for player in stats['players_won']:
+                pos = position_map.get(player['position'], 'UNK')
+                if pos in spending_by_position:
+                    spending_by_position[pos]['spent'] += player['price']
+                    spending_by_position[pos]['count'] += 1
+
             team_scores.append({
                 'id': team_id,
                 'name': team_name,
@@ -209,6 +225,7 @@ class FunReportGenerator:
                 'value_efficiency': value_efficiency,
                 'clubs_diversity': len(stats['clubs_represented']),
                 'win_rate': win_rate,
+                'spending_by_position': spending_by_position,
                 'stats': stats
             })
 
@@ -587,114 +604,104 @@ class FunReportGenerator:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPG Mercato Roast Report 🔥</title>
+    <title>MPG Mercato Analysis</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
             padding: 20px;
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .header {
             background: white;
-            padding: 40px;
-            border-radius: 20px;
+            padding: 30px;
+            border-radius: 12px;
             text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 600;
         }
 
         .subtitle {
-            font-size: 1.2em;
-            color: #666;
+            font-size: 1em;
+            color: #7f8c8d;
         }
 
         .section {
             background: white;
-            padding: 30px;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         h2 {
-            font-size: 2em;
+            font-size: 1.6em;
             margin-bottom: 20px;
-            color: #667eea;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin: 20px 0 15px 0;
+            color: #34495e;
+            font-weight: 600;
         }
 
         .podium {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
         }
 
         .podium-item {
-            padding: 20px;
-            border-radius: 15px;
+            padding: 25px;
+            border-radius: 12px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
         }
 
-        .rank-1 {
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            grid-column: span 1;
-        }
-
-        .rank-2 {
-            background: linear-gradient(135deg, #C0C0C0, #808080);
-        }
-
-        .rank-3 {
-            background: linear-gradient(135deg, #CD7F32, #8B4513);
-        }
-
-        .rank-number {
-            font-size: 4em;
-            font-weight: bold;
-            opacity: 0.3;
-            position: absolute;
-            top: -10px;
-            right: 10px;
-        }
+        .rank-1 { border-color: #ffd700; background: #fffbeb; }
+        .rank-2 { border-color: #c0c0c0; background: #f8f9fa; }
+        .rank-3 { border-color: #cd7f32; background: #fff5eb; }
 
         .team-name {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
         }
 
         .team-score {
-            font-size: 2em;
-            font-weight: bold;
-            margin: 10px 0;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #3498db;
+            margin: 8px 0;
         }
 
         .team-stats {
             font-size: 0.9em;
-            opacity: 0.9;
+            color: #7f8c8d;
+            line-height: 1.8;
         }
 
         .rankings-table {
@@ -704,118 +711,141 @@ class FunReportGenerator:
         }
 
         .rankings-table th {
-            background: #667eea;
-            color: white;
-            padding: 15px;
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 12px;
             text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
         }
 
         .rankings-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #eee;
+            padding: 12px;
+            border-bottom: 1px solid #ecf0f1;
+            font-size: 0.95em;
         }
 
         .rankings-table tr:hover {
-            background: #f5f5f5;
+            background: #f8f9fa;
         }
 
-        .team-detail {
-            border: 2px solid #667eea;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-            background: linear-gradient(to right, #f8f9ff, white);
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border-radius: 8px;
         }
 
-        .roast-box {
-            background: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 10px;
+        .stat-label {
+            font-weight: 600;
+            color: #2c3e50;
         }
 
-        .roast-box li {
-            margin: 10px 0;
-            line-height: 1.6;
+        .stat-value {
+            color: #3498db;
+            font-weight: 600;
         }
 
-        .players-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .player-card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            transition: transform 0.2s;
-        }
-
-        .player-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .player-card.great-value {
-            border-color: #28a745;
-            background: #f0fff4;
-        }
-
-        .player-card.bad-value {
-            border-color: #dc3545;
-            background: #fff5f5;
-        }
-
-        .player-name {
-            font-weight: bold;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .player-stats {
-            font-size: 0.85em;
-            color: #666;
-            margin: 5px 0;
-        }
-
-        .stat-badge {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 2px 8px;
+        .profile-card {
+            background: #f8f9fa;
             border-radius: 12px;
-            font-size: 0.8em;
-            margin: 2px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .profile-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .archetype {
+            font-size: 1.1em;
+            color: #3498db;
+        }
+
+        .trait-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+
+        .trait-badge {
+            background: #3498db;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.85em;
         }
 
         .chart-container {
             position: relative;
-            height: 400px;
-            margin: 30px 0;
+            height: 350px;
+            margin: 25px 0;
+        }
+
+        .position-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .position-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .position-label {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-bottom: 8px;
+        }
+
+        .position-value {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #3498db;
+        }
+
+        .position-sub {
+            font-size: 0.85em;
+            color: #95a5a6;
+            margin-top: 4px;
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2em; }
+            h1 { font-size: 1.8em; }
             .podium { grid-template-columns: 1fr; }
+            .position-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🔥 MPG Mercato Roast Report 🔥</h1>
-            <p class="subtitle">Who Spent Wisely? Who Got Absolutely Rinsed? Let's Find Out!</p>
+            <h1>MPG Mercato Analysis</h1>
+            <p class="subtitle">Squad Building & Investment Strategy Breakdown</p>
         </div>
 '''
 
         # Podium
         html += '''
         <div class="section">
-            <h2>🏆 The Podium</h2>
+            <h2>Top 3 Teams</h2>
             <div class="podium">
 '''
 
@@ -824,13 +854,10 @@ class FunReportGenerator:
             medal = ["🥇", "🥈", "🥉"][i-1]
             html += f'''
                 <div class="podium-item {rank_class}">
-                    <div class="rank-number">{medal}</div>
-                    <div class="team-name">{team['name']}</div>
-                    <div class="team-score">{team['quality_score']:.0f} pts</div>
+                    <div class="team-name">{medal} {team['name']}</div>
+                    <div class="team-score">{team['quality_score']:.0f}</div>
                     <div class="team-stats">
-                        ⭐ {team['avg_rating']:.2f} avg rating<br>
-                        ⚽ {team['total_goals']} goals<br>
-                        🏟️ {team['clubs_diversity']} clubs
+                        Rating: {team['avg_rating']:.2f} • Goals: {team['total_goals']} • Win Rate: {team['win_rate']:.0f}%
                     </div>
                 </div>
 '''
@@ -840,37 +867,56 @@ class FunReportGenerator:
         </div>
 '''
 
-        # Silly Awards Section
+        # Position Spending Analysis
         html += '''
         <div class="section">
-            <h2>🏅 Silly Awards Ceremony</h2>
-            <div class="awards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+            <h2>Investment Strategy by Position</h2>
+            <p style="color: #7f8c8d; margin-bottom: 20px;">How much did each team invest in different positions?</p>
 '''
 
-        for award_key, award in awards.items():
+        for team in team_scores:
+            spending = team['spending_by_position']
+            total_spent = team['stats']['total_spent']
+
             html += f'''
-                <div class="award-card" style="background: linear-gradient(135deg, #f8f9ff, #e8eaff); border: 2px solid #667eea; border-radius: 15px; padding: 20px; text-align: center;">
-                    <div style="font-size: 3em; margin-bottom: 10px;">{award['emoji']}</div>
-                    <h3 style="color: #667eea; margin-bottom: 10px;">{award['title']}</h3>
-                    <div style="font-size: 1.3em; font-weight: bold; margin-bottom: 10px; color: #333;">
-                        {award['winner']}
-                    </div>
-                    <p style="color: #666; font-size: 0.95em;">{award['description']}</p>
+            <div class="profile-card" style="border-left-color: #3498db;">
+                <div class="profile-header">
+                    <div class="profile-title">{team['name']}</div>
+                    <div style="color: #7f8c8d;">Total: {total_spent}€</div>
                 </div>
+                <div class="position-grid">
+'''
+
+            for pos in ['GK', 'DEF', 'MID', 'FWD']:
+                spent = spending[pos]['spent']
+                count = spending[pos]['count']
+                pct = (spent / total_spent * 100) if total_spent > 0 else 0
+                avg = (spent / count) if count > 0 else 0
+
+                emoji = {'GK': '🧤', 'DEF': '🛡️', 'MID': '⚙️', 'FWD': '⚽'}
+
+                html += f'''
+                    <div class="position-card">
+                        <div class="position-label">{emoji[pos]} {pos}</div>
+                        <div class="position-value">{spent}€</div>
+                        <div class="position-sub">{pct:.0f}% • {count} players • {avg:.0f}€ avg</div>
+                    </div>
+'''
+
+            html += '''
+                </div>
+            </div>
 '''
 
         html += '''
-            </div>
         </div>
 '''
 
-        # Psychological Profiles Section
+        # Psychological Profiles Section (Simplified)
         html += '''
         <div class="section">
-            <h2>🧠 Psychological Profiles - Know Your Managers</h2>
-            <p style="color: #666; margin-bottom: 30px;">
-                Based on bidding behavior, spending patterns, and squad building choices, here's what makes each manager tick...
-            </p>
+            <h2>Manager Profiles</h2>
+            <p style="color: #7f8c8d; margin-bottom: 20px;">Bidding behavior & squad building strategy</p>
 '''
 
         for team in team_scores:
@@ -881,162 +927,21 @@ class FunReportGenerator:
             profile = profiles[name]
 
             html += f'''
-            <div class="team-detail" style="margin-bottom: 25px;">
-                <h3>{name}</h3>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
-                    <div>
-                        <h4 style="color: #667eea;">Archetype</h4>
-                        <p style="font-size: 1.3em; font-weight: bold;">{profile['archetype']}</p>
-                        <p style="color: #666; margin-top: 5px;">{profile['strategy']}</p>
-                    </div>
-
-                    <div>
-                        <h4 style="color: #667eea;">Personality Type</h4>
-                        <p style="font-size: 1.3em; font-weight: bold;">{profile.get('personality', '🎯 The Manager')}</p>
-                    </div>
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-title">{name}</div>
+                    <div class="archetype">{profile['archetype']}</div>
                 </div>
-
-                <div style="margin-top: 20px;">
-                    <h4 style="color: #667eea;">Key Traits</h4>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-'''
-
-            for trait in profile['traits']:
-                html += f'''
-                        <span class="stat-badge" style="background: #764ba2; padding: 5px 12px; font-size: 0.9em;">{trait}</span>
-'''
-
-            html += f'''
-                    </div>
-                </div>
-
-                <div style="margin-top: 20px; padding: 15px; background: #f8f9ff; border-radius: 10px;">
-                    <h4 style="color: #667eea; margin-bottom: 10px;">Behavioral Analysis</h4>
-                    <p style="color: #333; line-height: 1.6;">{profile['description']}</p>
-                </div>
-
-                <div style="margin-top: 15px; padding: 15px; background: #fff3cd; border-radius: 10px; border-left: 4px solid #ffc107;">
-                    <p style="color: #856404; margin: 0;"><strong>💰 Money Philosophy:</strong> {profile['emotional_state']}</p>
+                <p style="color: #7f8c8d; margin: 10px 0;">{profile['strategy']}</p>
+                <div class="stat-row" style="margin-top: 15px;">
+                    <span class="stat-label">Personality</span>
+                    <span class="stat-value">{profile.get('personality', '🎯 The Manager')}</span>
                 </div>
             </div>
 '''
 
         html += '''
         </div>
-'''
-
-        # Most Contested Players Section
-        html += '''
-        <div class="section">
-            <h2>🔥 Most Contested Auctions - Battle Royale!</h2>
-            <p style="color: #666; margin-bottom: 20px;">
-                These players had everyone fighting for them. Who won the bidding wars?
-            </p>
-'''
-
-        # Sort contested players by number of bidders
-        top_contested = sorted(self.contested_players, key=lambda x: x['total_bidders'], reverse=True)[:15]
-
-        if top_contested:
-            html += '''
-            <table class="rankings-table">
-                <thead>
-                    <tr>
-                        <th>Player</th>
-                        <th>Club</th>
-                        <th>Bidders</th>
-                        <th>Winner</th>
-                        <th>Price</th>
-                        <th>Quota</th>
-                        <th>Value</th>
-                        <th>Rating</th>
-                        <th>Goals</th>
-                        <th>Analysis</th>
-                    </tr>
-                </thead>
-                <tbody>
-'''
-
-            for contest in top_contested:
-                player = contest['player']
-                winner = contest['winner']
-                total_bidders = contest['total_bidders']
-
-                value_color = 'green' if player['value'] >= 0 else 'red'
-                smart_buy = "🧠 Smart!" if player['value'] >= -5 else "😬 Overpaid" if player['value'] < -15 else "📊 Fair"
-
-                # Determine if winner got a good deal
-                if player['avgRating'] > 5.5 and player['value'] >= -5:
-                    analysis = "✅ Great win!"
-                elif player['avgRating'] > 5.0:
-                    analysis = "👍 Good pickup"
-                elif player['value'] < -20:
-                    analysis = "💸 Too much!"
-                else:
-                    analysis = "🤷 Decent"
-
-                html += f'''
-                    <tr>
-                        <td><strong>{player['name']}</strong></td>
-                        <td>{player['club']}</td>
-                        <td><strong style="color: #667eea; font-size: 1.2em;">{total_bidders}</strong> teams</td>
-                        <td><strong>{winner}</strong></td>
-                        <td>{player['price']}€</td>
-                        <td>{player['quotation']}€</td>
-                        <td style="color: {value_color}; font-weight: bold;">{player['value']:+}€</td>
-                        <td>⭐ {player['avgRating']:.2f}</td>
-                        <td>⚽ {player['totalGoals']}</td>
-                        <td>{analysis}</td>
-                    </tr>
-'''
-
-            html += '''
-                </tbody>
-            </table>
-'''
-
-            # Add summary stats
-            total_contested = len([x for x in self.contested_players if x['total_bidders'] >= 3])
-            avg_bidders = sum(x['total_bidders'] for x in self.contested_players) / len(self.contested_players) if self.contested_players else 0
-
-            # Who won the most contested battles?
-            winner_counts = {}
-            for contest in self.contested_players:
-                winner_id = contest['winner_id']
-                winner_counts[winner_id] = winner_counts.get(winner_id, 0) + 1
-
-            html += f'''
-            <div style="margin-top: 30px; padding: 20px; background: #f8f9ff; border-radius: 10px;">
-                <h3>📊 Bidding War Statistics</h3>
-                <p><strong>{total_contested}</strong> players had 3+ bidders competing for them!</p>
-                <p>Average bidders per contested player: <strong>{avg_bidders:.1f}</strong></p>
-
-                <h4 style="margin-top: 20px;">🏆 Kings of Contested Auctions (Who Won the Most Battles)</h4>
-                <ul style="font-size: 1.1em;">
-'''
-
-            sorted_winners = sorted(winner_counts.items(), key=lambda x: x[1], reverse=True)
-            for i, (winner_id, count) in enumerate(sorted_winners[:5], 1):
-                winner_name = self.teams.get(winner_id, {}).get('name', winner_id[-6:])
-                # Calculate their success rate on contested players
-                wins = count
-                total_contested_by_team = sum(1 for c in self.contested_players if c['winner_id'] == winner_id)
-
-                emoji = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣"][i-1] if i <= 5 else "•"
-                html += f'''
-                    <li>{emoji} <strong>{winner_name}</strong>: Won <strong>{wins}</strong> contested auctions - {"Bidding warrior!" if wins >= 5 else "Competitive player" if wins >= 3 else "Careful selector"}</li>
-'''
-
-            html += '''
-                </ul>
-            </div>
-        </div>
-'''
-        else:
-            html += '''
-                <p>No highly contested auctions found.</p>
-            </div>
 '''
 
         # Full Rankings Table
@@ -1080,206 +985,6 @@ class FunReportGenerator:
                 </tbody>
             </table>
         </div>
-'''
-
-        # Charts
-        html += '''
-        <div class="section">
-            <h2>📈 Visual Analysis</h2>
-            <div class="chart-container">
-                <canvas id="qualityChart"></canvas>
-            </div>
-            <div class="chart-container">
-                <canvas id="valueChart"></canvas>
-            </div>
-        </div>
-'''
-
-        # Team Details with Roasts
-        html += '''
-        <div class="section">
-            <h2>🎯 Team-by-Team Roast</h2>
-'''
-
-        for i, team in enumerate(team_scores, 1):
-            name = team['name']
-            team_roasts = roasts.get(name, [])
-
-            html += f'''
-            <div class="team-detail">
-                <h3>#{i} - {name}</h3>
-                <p><strong>Quality Score:</strong> {team['quality_score']:.0f} |
-                   <strong>Avg Rating:</strong> {team['avg_rating']:.2f} |
-                   <strong>Total Goals:</strong> {team['total_goals']} |
-                   <strong>Clubs:</strong> {team['clubs_diversity']}</p>
-
-                <div class="roast-box">
-                    <strong>🔥 The Roast:</strong>
-                    <ul>
-'''
-
-            for roast in team_roasts:
-                html += f'<li>{roast}</li>'
-
-            html += '''
-                    </ul>
-                </div>
-
-                <h4>Club Diversity:</h4>
-                <p>
-'''
-
-            # Add club breakdown
-            club_counts = {}
-            for p in team['stats']['players_won']:
-                club = p['club']
-                if club and club != 'Unknown':
-                    club_counts[club] = club_counts.get(club, 0) + 1
-
-            if club_counts:
-                sorted_clubs = sorted(club_counts.items(), key=lambda x: x[1], reverse=True)
-                club_text = ', '.join([f"<strong>{club}</strong> ({count})" for club, count in sorted_clubs])
-                html += f"{club_text}"
-
-            html += '''
-                </p>
-
-                <h4>Squad:</h4>
-                <div class="players-grid">
-'''
-
-            # Sort players by position (GK -> DEF -> MID -> FWD), then by value
-            players = sorted(team['stats']['players_won'], key=lambda x: (x['position'], -x['value']))
-
-            # Group by position
-            position_headers = {1: '🧤 Goalkeepers', 2: '🛡️ Defenders', 3: '⚙️ Midfielders', 4: '⚽ Forwards'}
-            position_badges = {1: 'GK', 2: 'DEF', 3: 'MID', 4: 'FWD'}
-            current_position = None
-
-            for player in players:
-                # Add position header when position changes
-                if player['position'] != current_position:
-                    current_position = player['position']
-                    position_label = position_headers.get(current_position, 'Unknown')
-                    html += f'''
-                </div>
-                <h4 style="margin-top: 20px; color: #667eea;">{position_label}</h4>
-                <div class="players-grid">
-'''
-
-                card_class = 'great-value' if player['value'] > 0 else 'bad-value' if player['value'] < -10 else ''
-                pos_name = position_badges.get(player['position'], 'UNK')
-
-                html += f'''
-                    <div class="player-card {card_class}">
-                        <div class="player-name">{player['name']}</div>
-                        <div class="player-stats">
-                            <span class="stat-badge">{pos_name}</span>
-                            <span class="stat-badge" style="background: #28a745;">{player['club']}</span>
-                            <span class="stat-badge">{player['price']}€</span>
-                            <span class="stat-badge" style="background: {'green' if player['value'] >= 0 else 'red'}">
-                                {player['value']:+}€
-                            </span>
-                        </div>
-                        <div class="player-stats">
-                            ⭐ {player['avgRating']:.2f} rating |
-                            📊 {player['avgPoints']:.1f}pts |
-                            ⚽ {player['totalGoals']}g
-                        </div>
-                        <div class="player-stats">
-                            🏃 {player['totalMatches']} matches played
-                        </div>
-                    </div>
-'''
-
-            html += '''
-                </div>
-            </div>
-'''
-
-        html += '''
-        </div>
-'''
-
-        # JavaScript for charts
-        team_names = [t['name'][:15] + '...' if len(t['name']) > 15 else t['name'] for t in team_scores]
-        quality_scores = [t['quality_score'] for t in team_scores]
-        value_effs = [abs(t['value_efficiency']) for t in team_scores]
-
-        html += f'''
-        <script>
-            // Quality Score Chart
-            const qualityCtx = document.getElementById('qualityChart').getContext('2d');
-            new Chart(qualityCtx, {{
-                type: 'bar',
-                data: {{
-                    labels: {json.dumps(team_names)},
-                    datasets: [{{
-                        label: 'Team Quality Score',
-                        data: {json.dumps(quality_scores)},
-                        backgroundColor: 'rgba(102, 126, 234, 0.8)',
-                        borderColor: 'rgba(102, 126, 234, 1)',
-                        borderWidth: 2
-                    }}]
-                }},
-                options: {{
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {{
-                        y: {{
-                            beginAtZero: true,
-                            title: {{
-                                display: true,
-                                text: 'Quality Score'
-                            }}
-                        }}
-                    }},
-                    plugins: {{
-                        title: {{
-                            display: true,
-                            text: 'Team Quality Scores (Higher = Better Squad)',
-                            font: {{ size: 18 }}
-                        }}
-                    }}
-                }}
-            }});
-
-            // Value Efficiency Chart
-            const valueCtx = document.getElementById('valueChart').getContext('2d');
-            new Chart(valueCtx, {{
-                type: 'bar',
-                data: {{
-                    labels: {json.dumps(team_names)},
-                    datasets: [{{
-                        label: 'Average Overpay per Player (€)',
-                        data: {json.dumps(value_effs)},
-                        backgroundColor: 'rgba(220, 53, 69, 0.8)',
-                        borderColor: 'rgba(220, 53, 69, 1)',
-                        borderWidth: 2
-                    }}]
-                }},
-                options: {{
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {{
-                        y: {{
-                            beginAtZero: true,
-                            title: {{
-                                display: true,
-                                text: 'Overpaid Amount (€)'
-                            }}
-                        }}
-                    }},
-                    plugins: {{
-                        title: {{
-                            display: true,
-                            text: 'Who Overpaid the Most? (Lower = Better Value)',
-                            font: {{ size: 18 }}
-                        }}
-                    }}
-                }}
-            }});
-        </script>
     </div>
 </body>
 </html>
